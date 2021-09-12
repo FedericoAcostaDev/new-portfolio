@@ -17,7 +17,7 @@ const Header = () => {
 
   <Grid item xs align='center'>
   <Typography variant='body1' align="left" gutterBottom >
-         I am a Remote Full-Stack web developer with an art & design background.
+         A Remote Full-Stack web developer with an art & design background.
          </Typography>
          <Typography variant='body1' align="left" gutterBottom >
          Welcome to my portfolio!
