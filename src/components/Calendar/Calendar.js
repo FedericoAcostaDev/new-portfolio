@@ -1,10 +1,21 @@
 import React from 'react';
-import useStyles from './Styles';
+
 import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
 import { Button, Card, CardActionArea, CardActions,CardContent  } from '@material-ui/core';
 
 
-
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200,
+  },
+}));
 
 const DatePicker = () => {
   const classes = useStyles();

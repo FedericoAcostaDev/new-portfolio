@@ -2,8 +2,25 @@ import React from 'react';
 
 import {AppBar, Toolbar, IconButton, Typography,} from '@material-ui/core/';
 import MenuIcon from '@material-ui/icons/Menu';
-import useStyles from './Styles';
+
 import logo from '../../Assets/Logo.png';
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  
+  title: {
+    flexGrow: 1,
+  },
+
+}));
+
 
 const NavBar = () => {
     const classes = useStyles();

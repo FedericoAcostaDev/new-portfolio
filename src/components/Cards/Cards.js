@@ -7,10 +7,17 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import {Button, Grid} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import useStyles from './Styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 
-
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
+});
 
 export default function ImgMediaCard() {
   const classes = useStyles();
