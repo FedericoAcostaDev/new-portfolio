@@ -1,21 +1,29 @@
-import React from 'react';
+import React from "react";
 
-import NavBar from './components/NavBar/NavBar';
-import Header from './components/About/Header';
-import ControlledAccordions from './components/Text-img/Text-img';
+import Card from '@material-ui/core/Card';
 
-import './App.css';
+import NavBar from "./components/NavBar/NavBar";
+import Header from "./components/About/Header";
+import ControlledAccordions from "./components/Text-img/Text-img";
+import ImgMediaCard from "./components/Cards/Cards";
+import DatePicker from "./components/Calendar/Calendar";
+import Footer from "./components/Footer/Footer";
 
-const App =() => {
+import "./App.css";
+
+const App = () => {
   return (
-    
     <div>
-       <NavBar />
+      <NavBar />
       <Header />
-      <ControlledAccordions />
+      <Card container direction='column' >
+        <ControlledAccordions />
+        <ImgMediaCard />
+        <DatePicker />
+        <Footer/>
+      </Card>
     </div>
-    
   );
-}
+};
 
 export default App;
