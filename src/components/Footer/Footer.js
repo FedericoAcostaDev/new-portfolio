@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   container: {
       padding: '10vw',
-      background: '#9fa8da',
+      background: '#90a4ae',
   },
 
 }));

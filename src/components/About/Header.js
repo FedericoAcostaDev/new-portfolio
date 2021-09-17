@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 
-
 import logo from '../../Assets/Logo.png';
 import { makeStyles } from "@material-ui/core";
 
@@ -9,7 +8,7 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   container: {
       padding: '10vw',
-      background: '#9fa8da',
+      background: '#90a4ae',
   },
 
 }));

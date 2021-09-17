@@ -9,17 +9,22 @@ import ControlledAccordions from "./components/Acordion/Acordion";
 import ImgMediaCard from "./components/Cards/Cards";
 import DatePicker from "./components/Calendar/Calendar";
 import Footer from "./components/Footer/Footer";
-import { blueGrey } from '@material-ui/core/colors';
 
-import "./App.css";
-
-const theme = createTheme ({
+const theme = createTheme({
   palette: {
     primary: {
-      main: blueGrey[500],
-    }
-  }
-})
+      light: '#c1d5e0',
+      main: '#90a4ae',
+      dark: '#62757f',
+    },
+    secondary: {
+      light: '#ffe97d',
+      main: '#ffb74d',
+      dark: '#c88719',
+    },
+  },
+});
+
 
 const App = () => {
   return (
