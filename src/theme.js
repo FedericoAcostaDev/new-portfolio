@@ -24,9 +24,6 @@ const theme = createTheme({
       success: {
         main: '#4caf50',
       },
-      success: {
-        main: '#4caf50',
-      },
     },
   });
   export default theme;
