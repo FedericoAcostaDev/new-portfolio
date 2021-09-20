@@ -2,13 +2,12 @@ import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 
 import logo from '../../Assets/Logo.png';
-import { makeStyles } from "@material-ui/core";
-
+import { makeStyles, ThemeProvider } from "@material-ui/core";
+import theme from '../../theme';
 
 const useStyles = makeStyles((theme) => ({
   container: {
       padding: '10vw',
-      background: '#90a4ae',
   },
 
 }));
@@ -18,7 +17,7 @@ const Header = () => {
   const classes = useStyles();
 
     return (
-        
+     <ThemeProvider theme={theme}>     
 <Grid container className={classes.container}  direction="row" spacing={1} justifyContent="flex-start">
 
   <Grid item xs align='center' >
@@ -32,7 +31,8 @@ const Header = () => {
   <Grid item xs align='center'>
   <img src= {logo} alt='' height='80vm'/>
   </Grid>
-  </Grid>      
+  </Grid>     
+  </ThemeProvider> 
   )
 };
 

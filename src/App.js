@@ -1,8 +1,9 @@
 import React from "react";
 
-import {Container} from '@material-ui/core';
-import {ThemeProvider, createTheme} from '@material-ui/core/styles'
-
+import {Container, Paper} from '@material-ui/core';
+import {ThemeProvider} from '@material-ui/core/styles'
+import theme from './theme'
+import photo2 from './Assets/header.png';
 import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/About/Header";
 import ControlledAccordions from "./components/Acordion/Acordion";
@@ -10,35 +11,28 @@ import ImgMediaCard from "./components/Cards/Cards";
 import DatePicker from "./components/Calendar/Calendar";
 import Footer from "./components/Footer/Footer";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      light: '#c1d5e0',
-      main: '#90a4ae',
-      dark: '#62757f',
-    },
-    secondary: {
-      light: '#ffe97d',
-      main: '#ffb74d',
-      dark: '#c88719',
-    },
-  },
-});
+
 
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <div>
+    <ThemeProvider theme={theme}>       
     <NavBar />
+    <div style={{ 
+      backgroundImage: `url(${photo2})`, //ES6
+      backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'  }}>
       <Header />
     <Container maxWidth='lg'>
+    <Paper >
         <ControlledAccordions />
         <ImgMediaCard />
-        <DatePicker />  
+        <DatePicker /> 
+        </Paper>
     </Container>
     <Footer/>
-    </div>
+    </div>  
     </ThemeProvider>
   );
 };

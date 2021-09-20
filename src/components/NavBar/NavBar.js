@@ -1,47 +1,36 @@
 import React from 'react';
 
-import {AppBar, Toolbar, IconButton, Typography,} from '@material-ui/core/';
-import MenuIcon from '@material-ui/icons/Menu';
+import {AppBar, Toolbar, IconButton} from '@material-ui/core/';
 
-import logo from '../../Assets/Logo.png';
-import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: '#90A4AE'
-  },
-  
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  
-  title: {
-    flexGrow: 1,
-  },
+import { Box,Switch, ThemeProvider } from "@material-ui/core";
+import theme from '../../theme';
+import BasicMenu from './Menu';
 
-}));
 
 
 const NavBar = () => {
-    const classes = useStyles();
 
     return (
-      <div className={classes.root}>
-        <AppBar position="static">
-    <Toolbar>
-      
-      <Typography variant="h6" className={classes.title}>
-        <img src= {logo} alt='' height='50em'/>
-      </Typography>
-      <IconButton edge="start" className={classes.menuButton}  color="inherit" aria-label="menu">
-        <MenuIcon />
-      </IconButton>
-     
-    </Toolbar>
-  </AppBar>
-  </div>
-    )
-    }
+      <ThemeProvider theme={theme}>  
+      <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="medium"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <BasicMenu  />
+          </IconButton>
+          <Switch sx={{ flexGrow: 1, alignSelf: 'flex-end' }}/>
+        </Toolbar>
+      </AppBar>
+    </Box>
+    </ThemeProvider>
+  );
+}
 
     export default NavBar;

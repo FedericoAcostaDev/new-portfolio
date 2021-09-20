@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import { Button, Card, CardActionArea, CardActions  } from '@material-ui/core';
-
+import theme from '../../theme'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -27,6 +27,8 @@ const DatePicker = () => {
   const classes = useStyles();
 
   return (
+    <ThemeProvider theme={theme}>  
+    <div>
     <Card className={classes.root} >
       <CardActionArea>
         
@@ -40,6 +42,8 @@ const DatePicker = () => {
       </CardActions>
       </CardActionArea>     
     </Card>
+    </div>
+    </ThemeProvider>
     
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Card from '@material-ui/core/Card';
+import {Card, Container }from '@material-ui/core';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -19,12 +19,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ImgMediaCard() {
-  const classes = useStyles();
+export default function ImgMediaCard(props) {
+  const classes = useStyles(props);
 
   return (
 
-    <div >
+    <Container  >
         <Typography variant='body1' align="left" gutterBottom >
           Projects
         </Typography>
@@ -153,6 +153,6 @@ export default function ImgMediaCard() {
     </Grid>
     </Grid>
     </Grid>
-    </div>
+    </Container>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import photo2 from '../../Assets/desktop2.png';
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
@@ -32,14 +31,7 @@ export default function ControlledAccordions(props) {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <div style={{ 
-      backgroundImage: `url(${photo2})`, //ES6
-      backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat'  }}>
-      
-    
-
+    <div>
     <Grid container item xs={6} direction='column' className={classes.root} >
       <Grid item xs align='center'>
         <Typography variant="h6"   align="left"gutterBottom >
