@@ -1,3 +1,5 @@
+//icons from https://icons8.com
+
 import React from "react";
 
 import { Card, Container } from "@material-ui/core";
@@ -15,7 +17,7 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 120,
   },
 });
 
@@ -23,13 +25,13 @@ export default function ImgMediaCard(props) {
   const classes = useStyles(props);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container sx={{ flexGrow: 1 }}>
-        <Typography variant="body1" align="left" gutterBottom>
+    <ThemeProvider theme={theme} >
+      <Container direction="row" sx={{ flexGrow: 1 }} >
+        <Typography variant="h6"   align="center" gutterBottom>
           Projects
         </Typography>
 
-        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}  >
+        <Grid container direction="row" spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}  >
           <Grid item xs>
               <Card className={classes.root}>
                 <CardActionArea>
@@ -37,7 +39,7 @@ export default function ImgMediaCard(props) {
                     component="img"
                     alt="ecommerce"
                     height="140"
-                    image="../../Assets/E-MARKET.png"
+                    image="/market.png"
                     title="ecommerce"
                   />
                   <CardContent>
@@ -49,9 +51,8 @@ export default function ImgMediaCard(props) {
                       color="textSecondary"
                       component="p"
                     >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                      In Beta, site in progress
+                      React.js|Node.js|Rest API's|React-Hooks
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -72,21 +73,20 @@ export default function ImgMediaCard(props) {
                     component="img"
                     alt="ecommerce"
                     height="140"
-                    image="../../Assets/E-MARKET.png"
+                    image="/pumpkin.png"
                     title="ecommerce"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Lizard
+                      Mix-or-Match
                     </Typography>
                     <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                      A matching game
+                      HTML|CSS|JavaScript
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -107,21 +107,20 @@ export default function ImgMediaCard(props) {
                     component="img"
                     alt="ecommerce"
                     height="140"
-                    image="../../Assets/E-MARKET.png"
+                    image="/brain.png"
                     title="ecommerce"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Lizard
+                      Face Detector
                     </Typography>
                     <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                      Insert an image URL and the API will recognize faces in the image
+                      React.js|Rest API's|Node.js|SQL
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -142,21 +141,20 @@ export default function ImgMediaCard(props) {
                     component="img"
                     alt="ecommerce"
                     height="140"
-                    image="/static/images/cards/E-MARKET.png"
+                    image="/robot.png"
                     title="ecommerce"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Lizard
+                      RoboFriends
                     </Typography>
                     <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                      A search engine to find your BRF (Best RoboFriend)
+                      React.js|Node.js
                     </Typography>
                   </CardContent>
                 </CardActionArea>

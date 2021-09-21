@@ -1,8 +1,6 @@
 import React from "react";
 
 import { Grid, Typography } from "@material-ui/core";
-// import logo from '../../Assets/Logo.png';
-
 import { makeStyles } from "@material-ui/core";
 
 
@@ -23,8 +21,8 @@ const Footer = () => {
 
   <Grid item xs align='center' >
 
-         <Typography variant='body1' align="left" gutterBottom >
-         Social
+         <Typography variant='body2' align="left" gutterBottom >
+         Social Media
          </Typography>
   </Grid>
   <Grid item xs align='center'>

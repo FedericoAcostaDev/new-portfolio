@@ -21,7 +21,7 @@ const App = () => {
     <div style={{ 
       backgroundImage: `url(${photo2})`, //ES6
       backgroundPosition: 'center',
-  backgroundSize: 'cover',
+  backgroundSize: 'expand',
   backgroundRepeat: 'no-repeat'  }}>
       <Header />
     <Container maxWidth='lg'>

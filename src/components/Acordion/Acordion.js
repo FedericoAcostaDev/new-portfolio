@@ -31,16 +31,16 @@ export default function ControlledAccordions(props) {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <div>
-    <Grid container item xs={6} direction='column' className={classes.root} >
-      <Grid item xs align='center'>
-        <Typography variant="h6"   align="left"gutterBottom >
+    <div >
+    <Grid container item xs={6} direction='row'  className={classes.root} >
+      <Grid item xs align='center' >
+        <Typography variant="h6"   align="right" gutterBottom >
           I create websites with attention to detail and a faithful rendering to
           the design.
         </Typography>
       </Grid>
 
-      <Grid item xs>
+      <Grid item xs align="left">
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
