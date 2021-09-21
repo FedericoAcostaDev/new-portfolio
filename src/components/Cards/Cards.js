@@ -7,7 +7,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import { Button, Grid, ThemeProvider } from "@material-ui/core";
+import { Button, Grid, ThemeProvider, Divider } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "../../theme";
@@ -27,9 +27,11 @@ export default function ImgMediaCard(props) {
   return (
     <ThemeProvider theme={theme} >
       <Container direction="row" sx={{ flexGrow: 1 }} >
+        <Divider variant="middle" gutterBottom/>
         <Typography variant="h6"   align="center" gutterBottom>
           Projects
         </Typography>
+
 
         <Grid container direction="row" spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}  >
           <Grid item xs>

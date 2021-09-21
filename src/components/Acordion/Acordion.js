@@ -32,15 +32,14 @@ export default function ControlledAccordions(props) {
   };
   return (
     <div >
-    <Grid container item xs={6} direction='row'  className={classes.root} >
-      <Grid item xs align='center' >
-        <Typography variant="h6"   align="right" gutterBottom >
+    <Grid container direction="row-reverse" spacing={3} columns={{ xs: 2, sm: 1, md: 2 }}  className={classes.root} >
+      <Grid item xs  >
+        <Typography variant="h6"   align="center" gutterBottom >
           I create websites with attention to detail and a faithful rendering to
           the design.
         </Typography>
-      </Grid>
-
-      <Grid item xs align="left">
+      </Grid >
+      <Grid item xs alignContent="left">
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
