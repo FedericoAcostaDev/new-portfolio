@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {IconButton, Menu, MenuItem} from "@material-ui/core";
-
+import logo from '../../Assets/Logo.png';
 
 
 export default function BasicMenu() {
@@ -22,7 +22,7 @@ export default function BasicMenu() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       > 
-      dashboard
+      <img src= {logo} alt='' height='30vm'/>
       </IconButton>
       <Menu
         id="basic-menu"

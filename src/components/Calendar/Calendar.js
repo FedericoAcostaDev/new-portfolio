@@ -1,53 +1,41 @@
-import React from 'react';
+import React from "react";
 
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { Button, Typography, Divider, Grid } from "@material-ui/core";
+import theme from "../../theme";
 
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { Button, Card, CardActionArea, CardActions  } from '@material-ui/core';
-import theme from '../../theme'
-
-const useStyles = makeStyles(theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
+const useStyles = makeStyles((theme) => ({
+  button: {
+    backgroundColor: "#FFA726",
+    margin: "4vw",
+    flexGrow: 1,
   },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 200,
-  },
-  root: {
-    backgroundColor: '#F5F5F6'
-},
-button: {
-  backgroundColor: '#FFA726'
-},
 }));
 
 const DatePicker = () => {
   const classes = useStyles();
 
   return (
-    <ThemeProvider theme={theme}>  
-    <div>
-    <Card className={classes.root} >
-      <CardActionArea>
-        
-          
-      
-    
-    <CardActions>
-    <Button className={classes.button} href="https://calendly.com/meetingwithfede/meet" color="inherit">
-  Schedule a meeting
-</Button >
-      </CardActions>
-      </CardActionArea>     
-    </Card>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Divider variant="middle" />
+        <Typography variant="h6" align="center">
+          Get in contact!
+        </Typography>
+        <Divider variant="middle" />
+        <Grid item xs={12}  >
+          <Button
+            className={classes.button}
+            align="right"
+            href="https://calendly.com/meetingwithfede/meet"
+            color="inherit"
+          >
+            Schedule a meeting
+          </Button>
+          </Grid>
+      </div>
     </ThemeProvider>
-    
   );
-}
+};
 
 export default DatePicker;
-
-

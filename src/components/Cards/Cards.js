@@ -13,12 +13,23 @@ import { makeStyles } from "@material-ui/core/styles";
 import theme from "../../theme";
 
 const useStyles = makeStyles({
+  container: {
+    paddingTop: '50px',
+    paddingBottom: '50px',
+  },
   root: {
     maxWidth: 345,
+    
   },
   media: {
     height: 120,
   },
+  title: {
+    padding: '3vw',
+  },
+  cards: {
+    marginTop: '20px'
+  }
 });
 
 export default function ImgMediaCard(props) {
@@ -26,14 +37,15 @@ export default function ImgMediaCard(props) {
 
   return (
     <ThemeProvider theme={theme} >
-      <Container direction="row" sx={{ flexGrow: 1 }} >
-        <Divider variant="middle" gutterBottom/>
-        <Typography variant="h6"   align="center" gutterBottom>
-          Projects
+      <Container className={classes.container} class direction="row" sx={{ flexGrow: 1 }} >
+        <Divider variant="middle" />
+        <Typography className={classes.title} variant="h6"   align="center" gutterBottom>
+          Portfolio Projects
         </Typography>
+        <Divider variant="middle" />
 
 
-        <Grid container direction="row" spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}  >
+        <Grid container className={classes.cards}direction="row" spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}  >
           <Grid item xs>
               <Card className={classes.root}>
                 <CardActionArea>
@@ -45,7 +57,7 @@ export default function ImgMediaCard(props) {
                     title="ecommerce"
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography variant="h5" component="h2">
                       E-Market
                     </Typography>
                     <Typography
@@ -79,7 +91,7 @@ export default function ImgMediaCard(props) {
                     title="ecommerce"
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography variant="h5" component="h2">
                       Mix-or-Match
                     </Typography>
                     <Typography
@@ -113,7 +125,7 @@ export default function ImgMediaCard(props) {
                     title="ecommerce"
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography variant="h5" component="h2">
                       Face Detector
                     </Typography>
                     <Typography
@@ -147,7 +159,7 @@ export default function ImgMediaCard(props) {
                     title="ecommerce"
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography variant="h5" component="h2">
                       RoboFriends
                     </Typography>
                     <Typography
