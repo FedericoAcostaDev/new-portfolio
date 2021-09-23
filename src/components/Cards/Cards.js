@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     paddingBottom: '50px',
   },
   root: {
-    maxWidth: 345,
+    maxWidth: 340,
     
   },
   media: {
@@ -38,7 +38,6 @@ export default function ImgMediaCard(props) {
   return (
     <ThemeProvider theme={theme} >
       <Container className={classes.container} direction="row" sx={{ flexGrow: 1 }} >
-        <Divider variant="middle" />
         <Typography className={classes.title} variant="h6"   align="center" gutterBottom>
           Portfolio Projects
         </Typography>
@@ -52,7 +51,6 @@ export default function ImgMediaCard(props) {
                   <CardMedia
                     component="img"
                     alt="ecommerce"
-                    height="140"
                     image="/market.png"
                     title="ecommerce"
                   />
@@ -86,7 +84,6 @@ export default function ImgMediaCard(props) {
                   <CardMedia
                     component="img"
                     alt="ecommerce"
-                    height="140"
                     image="/pumpkin.png"
                     title="ecommerce"
                   />
@@ -120,7 +117,6 @@ export default function ImgMediaCard(props) {
                   <CardMedia
                     component="img"
                     alt="ecommerce"
-                    height="140"
                     image="/brain.png"
                     title="ecommerce"
                   />
@@ -154,7 +150,6 @@ export default function ImgMediaCard(props) {
                   <CardMedia
                     component="img"
                     alt="ecommerce"
-                    height="140"
                     image="/robot.png"
                     title="ecommerce"
                   />

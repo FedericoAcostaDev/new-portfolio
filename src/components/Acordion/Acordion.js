@@ -14,13 +14,11 @@ const useStyles = makeStyles((theme) => ({
     padding: "3vw",
   },
   button: {
-    backgroundColor: "#FFA726",
     margin: "4vw",
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
-    //flexBasis: '33.33%',
-    //flexShrink: 0,
+    flexShrink: 0,
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
@@ -28,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ControlledAccordions(props) {
+export default function ControlledAccordions() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -119,14 +117,17 @@ export default function ControlledAccordions(props) {
           </Accordion>
         </Grid>
       </Grid>
+      <Grid container  direction='column' alignItems='center' justifyContent='center'>
       <Button
+      variant='contained'
+      size="small"
           className={classes.button}
           href="https://docs.google.com/document/d/e/2PACX-1vSnqiI9ocDHFipLmoIsn5zF3iQ2RAAh5diBUrFkq3bJBC7BYFXgNAhwmcxUK-fTGw/pub"
-          color="inherit"
-          align="center"
+          color="secondary"
         >
           View My Resume
         </Button>
+        </Grid>
         </ThemeProvider>
   );
 }

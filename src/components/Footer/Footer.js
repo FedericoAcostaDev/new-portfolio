@@ -31,13 +31,15 @@ const Footer = () => {
           </Typography>
         </Grid>
         <Grid item xs>
-        <IconButton href="https://www.linkedin.com/in/fede-acosta-b11a22211/">
-          <LinkedInIcon color="action"/>
+        <IconButton color="primary"
+        href="https://www.linkedin.com/in/fede-acosta-b11a22211/">
+          <LinkedInIcon/>
           </IconButton>
         </Grid>
         <Grid item xs>
-        <IconButton href="https://github.com/FedericoAcostaDev">
-          <GitHubIcon color="action"/>
+        <IconButton color="primary" 
+        href="https://github.com/FedericoAcostaDev">
+          <GitHubIcon />
           </IconButton>
         </Grid>
       </Grid>

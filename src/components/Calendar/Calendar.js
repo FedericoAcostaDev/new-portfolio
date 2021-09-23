@@ -1,8 +1,9 @@
 import React from "react";
 
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
-import { Button, Typography, Divider } from "@material-ui/core";
+import { Button, Typography, Divider, Grid } from "@material-ui/core";
 import theme from "../../theme";
+
 
 const useStyles = makeStyles((theme) => ({
   grid: {
@@ -10,30 +11,33 @@ const useStyles = makeStyles((theme) => ({
     //padding: '3vw',
   },
   button: {
-    backgroundColor: "#FFA726",
     margin: "4vw",
   },
 }));
 
-const DatePicker = (props) => {
-  const classes = useStyles(props);
+const DatePicker = () => {
+  const classes = useStyles();
 
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <Divider variant="middle" />
         <Typography variant="h6" align="center">
           Get in contact!
         </Typography>
         <Divider variant="middle" />
+        <Grid container  direction='column' alignItems='center' justifyContent='center'>
         <Button
+        variant='contained'
+        size="small"
+        
           className={classes.button}
           align="center"
           href="https://calendly.com/meetingwithfede/meet"
-          color="inherit"
+          color="secondary"
         >
           Schedule a meeting
         </Button>
+        </Grid>
       </div>
     </ThemeProvider>
   );

@@ -19,15 +19,11 @@ const NavBar = () => {
     return (
       <ThemeProvider theme={theme}>  
       <Box>
-      <AppBar position="fixed" >
+      <AppBar position="fixed" color='primary' >
         <Toolbar>
           <IconButton
           className={classes.menuIcon}
-            size="small"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2, }}
+            size="small"   
           >
             <BasicMenu  />
           </IconButton>
