@@ -1,12 +1,12 @@
 import React from "react";
 
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
-import { Button, Typography, Divider, Grid } from "@material-ui/core";
+import { Button, Typography, Divider } from "@material-ui/core";
 import theme from "../../theme";
 
 const useStyles = makeStyles((theme) => ({
   grid: {
-    width: '100%',
+    width: "100%",
     //padding: '3vw',
   },
   button: {
@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DatePicker = () => {
-  const classes = useStyles();
+const DatePicker = (props) => {
+  const classes = useStyles(props);
 
   return (
     <ThemeProvider theme={theme}>
@@ -26,16 +26,14 @@ const DatePicker = () => {
           Get in contact!
         </Typography>
         <Divider variant="middle" />
-        
-          <Button
-            className={classes.button}
-            align="center"
-            href="https://calendly.com/meetingwithfede/meet"
-            color="inherit"
-          >
-            Schedule a meeting
-          </Button>
-        
+        <Button
+          className={classes.button}
+          align="center"
+          href="https://calendly.com/meetingwithfede/meet"
+          color="inherit"
+        >
+          Schedule a meeting
+        </Button>
       </div>
     </ThemeProvider>
   );

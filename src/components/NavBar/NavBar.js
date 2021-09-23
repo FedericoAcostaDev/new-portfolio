@@ -18,7 +18,7 @@ const NavBar = () => {
   const classes = useStyles();
     return (
       <ThemeProvider theme={theme}>  
-      <Box sx>
+      <Box>
       <AppBar position="fixed" >
         <Toolbar>
           <IconButton

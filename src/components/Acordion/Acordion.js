@@ -67,8 +67,9 @@ export default function ControlledAccordions(props) {
             <AccordionDetails>
               <Typography variant="body2">
                 Semantic integration in compliance with web standards, display
-                and usability tests on all the main browsers on the market. HTML
-                / CSS / JS / React.js /GraphQL/ webpack / sass - Git
+                and usability tests on all the main browsers on the market.
+                <br/>
+                 HTML / CSS / JS / React.js /GraphQL/ webpack / sass - Git
               </Typography>
               <Typography variant="body2"></Typography>
               <Typography variant="body2"></Typography>

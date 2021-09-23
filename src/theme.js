@@ -2,6 +2,8 @@ import { createTheme} from '@material-ui/core/styles';
 
 const theme = createTheme({
     palette: {
+      type: 'light',
+
       primary: {
         light: '#c1d5e0',
         main: '#90a4ae',
