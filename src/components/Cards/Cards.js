@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     height: 120,
   },
   title: {
-    padding: '3vw',
+    
   },
   cards: {
     marginTop: '20px'
@@ -37,7 +37,7 @@ export default function ImgMediaCard(props) {
 
   return (
     <ThemeProvider theme={theme} >
-      <Container className={classes.container} class direction="row" sx={{ flexGrow: 1 }} >
+      <Container className={classes.container} direction="row" sx={{ flexGrow: 1 }} >
         <Divider variant="middle" />
         <Typography className={classes.title} variant="h6"   align="center" gutterBottom>
           Portfolio Projects

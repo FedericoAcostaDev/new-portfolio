@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Grid, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 
 
@@ -19,14 +19,20 @@ const Footer = () => {
         
 <Grid container className={classes.container}  direction="row" spacing={1} justifyContent="flex-start">
 
-  <Grid item xs align='center' >
-
-         <Typography variant='body2' align="left" gutterBottom >
-         Social Media
+  <Grid item xs align='center' direction='row' >
+         <Typography variant='body2' gutterBottom >
+         Social
          </Typography>
   </Grid>
-  <Grid item xs align='center'>
-  
+  <Grid item xs align='center' direction='row' >
+         <Typography variant='body2' gutterBottom >
+         LinkedIn
+         </Typography>
+  </Grid>
+  <Grid item xs align='center' direction='row' >
+         <Typography variant='body2' gutterBottom >
+         Github
+         </Typography>
   </Grid>
   </Grid>      
   )

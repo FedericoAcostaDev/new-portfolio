@@ -5,10 +5,13 @@ import { Button, Typography, Divider, Grid } from "@material-ui/core";
 import theme from "../../theme";
 
 const useStyles = makeStyles((theme) => ({
+  grid: {
+    width: '100%',
+    //padding: '3vw',
+  },
   button: {
     backgroundColor: "#FFA726",
     margin: "4vw",
-    flexGrow: 1,
   },
 }));
 
@@ -23,16 +26,16 @@ const DatePicker = () => {
           Get in contact!
         </Typography>
         <Divider variant="middle" />
-        <Grid item xs={12}  >
+        
           <Button
             className={classes.button}
-            align="right"
+            align="center"
             href="https://calendly.com/meetingwithfede/meet"
             color="inherit"
           >
             Schedule a meeting
           </Button>
-          </Grid>
+        
       </div>
     </ThemeProvider>
   );
