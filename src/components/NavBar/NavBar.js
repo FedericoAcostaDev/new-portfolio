@@ -1,11 +1,14 @@
 import React from 'react';
 
 import {AppBar, Toolbar, IconButton, makeStyles} from '@material-ui/core/';
-
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 import { Box,Switch, ThemeProvider } from "@material-ui/core";
 import theme from '../../theme';
 import BasicMenu from './Menu';
+
+
 
 const useStyles = makeStyles((theme) => ({
   menuIcon: {
@@ -26,8 +29,10 @@ const NavBar = () => {
             size="small"   
           >
             <BasicMenu  />
-          </IconButton>
-          <Switch className={classes.switch}/>
+          </IconButton >
+          <IconButton  color="secondary">
+          <Brightness4Icon />
+          </IconButton >
         </Toolbar>
       </AppBar>
     </Box>
