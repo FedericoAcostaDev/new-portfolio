@@ -26,6 +26,7 @@ const useStyles = makeStyles({
   },
   media: {
     height: 120,
+    width: 120,
   },
   title: {
     
@@ -51,7 +52,7 @@ export default function ImgMediaCard(props) {
           <Grid item sx>
               <Card className={classes.root}>
                 <CardActionArea>
-                  <CardMedia
+                  <CardMedia className={classes.media}
                     component="img"
                     alt="ecommerce"
                     image="/market.png"
@@ -88,7 +89,7 @@ export default function ImgMediaCard(props) {
             <Grid item xs>
               <Card className={classes.root}>
                 <CardActionArea>
-                  <CardMedia
+                  <CardMedia className={classes.media}
                     component="img"
                     alt="ecommerce"
                     image="/pumpkin.png"
@@ -125,7 +126,7 @@ export default function ImgMediaCard(props) {
             <Grid item xs>
               <Card className={classes.root}>
                 <CardActionArea>
-                  <CardMedia
+                  <CardMedia className={classes.media}
                     component="img"
                     alt="ecommerce"
                     image="/brain.png"
@@ -161,7 +162,7 @@ export default function ImgMediaCard(props) {
             <Grid item xs>
               <Card className={classes.root}>
                 <CardActionArea>
-                  <CardMedia
+                  <CardMedia className={classes.media}
                     component="img"
                     alt="ecommerce"
                     image="/robot.png"
