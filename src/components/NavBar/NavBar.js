@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {AppBar, Toolbar, IconButton, makeStyles} from '@material-ui/core/';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
+// import Brightness4Icon from '@mui/icons-material/Brightness4';
+// import Brightness7Icon from '@mui/icons-material/Brightness7';
 
-import { Box, ThemeProvider, useTheme, createTheme } from "@material-ui/core";
+import { Box, ThemeProvider, createTheme } from "@material-ui/core";
 import theme from '../../theme';
 import BasicMenu from './Menu';
 
@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
 
 function NavBar() {
   const classes = useStyles();
-  const colorMode = React.useContext(ColorModeContext);
     return (
       <ThemeProvider theme={theme}>  
       <Box>

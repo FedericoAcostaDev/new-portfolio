@@ -11,7 +11,6 @@ import ImgMediaCard from "./components/Cards/Cards";
 import DatePicker from "./components/Calendar/Calendar";
 import Footer from "./components/Footer/Footer";
 import Scroll from "./components/ScrollButton/ScrollButton";
-import { ClassNames } from "@emotion/react";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
