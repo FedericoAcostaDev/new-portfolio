@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     margin: "4vw",
+    borderRadius: '32px',
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -121,6 +122,7 @@ export default function ControlledAccordions() {
       <Button
       variant='contained'
       size="small"
+      
           className={classes.button}
           href="https://docs.google.com/document/d/e/2PACX-1vSnqiI9ocDHFipLmoIsn5zF3iQ2RAAh5diBUrFkq3bJBC7BYFXgNAhwmcxUK-fTGw/pub"
           color="secondary"
