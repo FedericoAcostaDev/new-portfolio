@@ -19,6 +19,7 @@ const useStyles = makeStyles({
   },
   root: {
     maxWidth: 340,
+    minWidth: 300,
     
   },
   media: {
@@ -45,7 +46,7 @@ export default function ImgMediaCard(props) {
 
 
         <Grid container className={classes.cards}direction="row" spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}  >
-          <Grid item xs>
+          <Grid item sx>
               <Card className={classes.root}>
                 <CardActionArea>
                   <CardMedia

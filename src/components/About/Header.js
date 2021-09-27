@@ -9,7 +9,15 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: "10vw",
     paddingTop: "80px",
+    wrap: 'wrap',
   },
+  logo: {
+    maxWidth: '400px',
+  },
+  title: {
+    maxWidth: '400px',
+  }
+
 }));
 
 const Header = () => {
@@ -20,14 +28,18 @@ const Header = () => {
       <Grid 
         container
         className={classes.container}
-        direction="row" spacing={3} columns={{ xs: 2}}
+        justifyContent='center'
+        direction="row" 
+        spacing={3}
+
+        
       >
         
-        <Grid item xs={6} >
-          <img src={logo} alt="" height="80vm" />
+        <Grid xs={4} align='center' className={classes.logo} item sx={{ flexGrow: 1 }} >
+          <img src={logo}  alt="" height="80vm" />
         </Grid>
 
-        <Grid item xs={6}  >
+        <Grid className={classes.title} align='left' item sx={{ flexGrow: 1 }} >
           <Typography variant="h6" gutterBottom>
             I am Federico Acosta, a Remote Full-Stack web developer with an art
             & design background.
