@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
 
 function NavBar() {
   const classes = useStyles();
-  const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
     return (
       <ThemeProvider theme={theme}>  
