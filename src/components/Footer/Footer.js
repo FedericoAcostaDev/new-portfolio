@@ -5,7 +5,6 @@ import { makeStyles, ThemeProvider } from "@material-ui/core";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import theme from "../../theme";
-import { Gradient } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   container: {
