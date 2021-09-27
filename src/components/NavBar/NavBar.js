@@ -31,9 +31,10 @@ function NavBar() {
           >
             <BasicMenu  />
           </IconButton >
-          <IconButton  onClick={colorMode.toggleColorMode} color="secondary">
+          {/*} <IconButton  onClick={colorMode.toggleColorMode} color="secondary">
           {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-          </IconButton >
+          </IconButton > 
+          */}
         </Toolbar>
       </AppBar>
     </Box>

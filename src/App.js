@@ -11,10 +11,18 @@ import ImgMediaCard from "./components/Cards/Cards";
 import DatePicker from "./components/Calendar/Calendar";
 import Footer from "./components/Footer/Footer";
 import Scroll from "./components/ScrollButton/ScrollButton";
-import { Link } from "react-scroll";
+import { ClassNames } from "@emotion/react";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  container: {
+    backgroundColor: '#F5F5F6'
+  },
+});
 
 
-const App = () => {
+export default function App() {
+  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>       
     <NavBar />
@@ -27,7 +35,7 @@ const App = () => {
     
       <Header />
     <Container maxWidth='lg'>
-    <Paper >
+    <Paper className={classes.container}>
         <ControlledAccordions />
         <ImgMediaCard />
         <DatePicker /> 
@@ -39,4 +47,3 @@ const App = () => {
   );
 };
 
-export default App;

@@ -20,6 +20,8 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 340,
     minWidth: 300,
+    borderRadius: '30px',
+    backgroundColor: 'primary',
     
   },
   media: {
@@ -38,14 +40,14 @@ export default function ImgMediaCard(props) {
 
   return (
     <ThemeProvider theme={theme} >
-      <Container id='projects' className={classes.container} direction="row" sx={{ flexGrow: 1 }} >
+      <Container id='projects' className={classes.container}  align='center' direction="column" sx={{ flexGrow: 1 }} >
         <Typography className={classes.title} variant="h6"   align="center" gutterBottom>
           Portfolio Projects
         </Typography>
         <Divider variant="middle" />
 
 
-        <Grid container className={classes.cards}direction="row" spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}  >
+        <Grid container className={classes.cards} justifyContent='center' direction="row" spacing={3} columns={{ xs: 4, sm: 8, md: 12 }}  >
           <Grid item sx>
               <Card className={classes.root}>
                 <CardActionArea>
