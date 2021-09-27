@@ -72,10 +72,14 @@ export default function ImgMediaCard(props) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="secondary">
+                  <Button size="small" color="secondary"
+                  href="https://dazzling-jones-1f1868.netlify.app/"
+                  >
                     live Demo
                   </Button>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary"
+                  href="https://github.com/FedericoAcostaDev/e-market"
+                  >
                     Source Code
                   </Button>
                 </CardActions>
@@ -105,10 +109,14 @@ export default function ImgMediaCard(props) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="secondary">
+                  <Button size="small" color="secondary"
+                  href='https://boring-northcutt-06aca7.netlify.app/'
+                  >
                     Live demo
                   </Button>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary"
+                  href='https://github.com/FedericoAcostaDev/MATCHINGGAME'
+                  >
                     Source code
                   </Button>
                 </CardActions>
@@ -138,10 +146,13 @@ export default function ImgMediaCard(props) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                <Button size="small" color="secondary">
+                <Button size="small" color="secondary"
+                href='https://smartfar.herokuapp.com/'
+                >
                     Live demo
                   </Button>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary"
+                  href='https://github.com/FedericoAcostaDev/FaceAppRecognition'>
                     Source code
                   </Button>
                 </CardActions>
@@ -171,10 +182,14 @@ export default function ImgMediaCard(props) {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                <Button size="small" color="secondary">
+                <Button size="small" color="secondary"
+                href='https://robofa.herokuapp.com/'
+                >
                     Live demo
                   </Button>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary"
+                  href='https://github.com/FedericoAcostaDev/RoboFriends'
+                  >
                     Source code
                   </Button>
                 </CardActions>
