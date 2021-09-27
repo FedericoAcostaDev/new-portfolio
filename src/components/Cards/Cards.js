@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 340,
     minWidth: 300,
-    borderRadius: '30px',
+    borderRadius: '0px',
     backgroundColor: 'primary',
     
   },
