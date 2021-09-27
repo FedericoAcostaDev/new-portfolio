@@ -35,7 +35,7 @@ export default function ControlledAccordions() {
   };
   return (
     <ThemeProvider theme={theme}>
-      <Grid
+      <Grid id='about'
         container
         className={classes.root}
         direction="column"

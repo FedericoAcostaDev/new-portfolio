@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from "react";
 import {IconButton, Menu, MenuItem} from "@material-ui/core";
 import logo from '../../Assets/Logo.png';
-
+import { Link as Scroll } from "react-scroll";
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -33,9 +33,15 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>About</MenuItem>
+        <Scroll to='about' smooth={true} >
+        <MenuItem onClick={handleClose}>See My Resume</MenuItem>
+        </Scroll>
+        <Scroll to='projects' smooth={true} >
         <MenuItem onClick={handleClose}>Portfolio Projects</MenuItem>
+        </Scroll>
+        <Scroll to='contact' smooth={true} >
         <MenuItem onClick={handleClose}>Get in contact</MenuItem>
+        </Scroll>
       </Menu>
     </div>
   );

@@ -20,7 +20,7 @@ const DatePicker = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <div id='contact'>
         <Typography variant="h6" align="center">
           Get in contact!
         </Typography>

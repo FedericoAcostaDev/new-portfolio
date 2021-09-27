@@ -11,7 +11,7 @@ import ImgMediaCard from "./components/Cards/Cards";
 import DatePicker from "./components/Calendar/Calendar";
 import Footer from "./components/Footer/Footer";
 import Scroll from "./components/ScrollButton/ScrollButton";
-
+import { Link } from "react-scroll";
 
 
 const App = () => {

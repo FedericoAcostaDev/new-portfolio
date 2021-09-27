@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles, IconButton } from "@material-ui/core";
 import ExpandLessIcon from "@material-ui//icons/ExpandLess";
-import { WindowSharp } from "@mui/icons-material";
 
 const useStyles = makeStyles((theme) => ({
     toTop: {

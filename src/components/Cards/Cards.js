@@ -37,7 +37,7 @@ export default function ImgMediaCard(props) {
 
   return (
     <ThemeProvider theme={theme} >
-      <Container className={classes.container} direction="row" sx={{ flexGrow: 1 }} >
+      <Container id='projects' className={classes.container} direction="row" sx={{ flexGrow: 1 }} >
         <Typography className={classes.title} variant="h6"   align="center" gutterBottom>
           Portfolio Projects
         </Typography>
