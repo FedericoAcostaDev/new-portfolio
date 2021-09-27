@@ -10,7 +10,7 @@ import ControlledAccordions from "./components/Acordion/Acordion";
 import ImgMediaCard from "./components/Cards/Cards";
 import DatePicker from "./components/Calendar/Calendar";
 import Footer from "./components/Footer/Footer";
-
+import Scroll from "./components/ScrollButton/ScrollButton";
 
 
 
@@ -18,11 +18,13 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>       
     <NavBar />
+    <Scroll showBelow={250}/>
     <div style={{ 
       backgroundImage: `url(${photo2})`, //ES6
       backgroundPosition: 'center',
   backgroundSize: 'expand',
   backgroundRepeat: 'no-repeat'  }}>
+    
       <Header />
     <Container maxWidth='lg'>
     <Paper >
