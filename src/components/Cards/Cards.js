@@ -2,15 +2,16 @@
 
 import React from "react";
 
+import { PropTypes } from 'prop-types';
 import { Card, Container } from "@material-ui/core";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import { Button, Grid, ThemeProvider, Divider } from "@material-ui/core";
+import { Button, Grid, Divider } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import theme from "../../theme";
+
 
 const useStyles = makeStyles({
   container: {
@@ -21,7 +22,6 @@ const useStyles = makeStyles({
     maxWidth: 340,
     minWidth: 300,
     borderRadius: '0px',
-    backgroundColor: 'primary',
     
   },
   media: {
@@ -36,12 +36,12 @@ const useStyles = makeStyles({
   }
 });
 
-export default function ImgMediaCard(props) {
-  const classes = useStyles(props);
+const Projects = ({props, children}) => {
+  const classes = useStyles();
 
   return (
-    <ThemeProvider theme={theme} >
       <Container id='projects' className={classes.container}  align='center' direction="column" sx={{ flexGrow: 1 }} >
+        {children}
         <Typography className={classes.title} variant="h6"   align="center" gutterBottom>
           Portfolio Projects
         </Typography>
@@ -198,6 +198,11 @@ export default function ImgMediaCard(props) {
             </Grid>
           </Grid>
       </Container>
-    </ThemeProvider>
   );
-}
+};
+
+Projects.propTypes = {
+  props: PropTypes.string
+};
+
+export default Projects;

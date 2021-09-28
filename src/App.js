@@ -7,7 +7,7 @@ import photo2 from "./Assets/header.png";
 import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/About/Header";
 import ControlledAccordions from "./components/Acordion/Acordion";
-import ImgMediaCard from "./components/Cards/Cards";
+import Projects from "./components/Cards/Cards";
 import DatePicker from "./components/Calendar/Calendar";
 import Footer from "./components/Footer/Footer";
 import Scroll from "./components/ScrollButton/ScrollButton";
@@ -45,9 +45,9 @@ export default function App() {
           <IconButton>
             ­<Brightness4Icon />
           </IconButton>
-          
+
             <ControlledAccordions />
-            <ImgMediaCard />
+            <Projects />
             <DatePicker />
           </Paper>
         </Container>

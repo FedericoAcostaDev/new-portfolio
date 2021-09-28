@@ -1,12 +1,13 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import { Accordion, Button } from "@material-ui/core/";
+import { PropTypes } from 'prop-types';
+import { Accordion, Button, Container } from "@material-ui/core/";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
-import theme from '../../theme';
+import { makeStyles } from "@material-ui/core/styles";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ControlledAccordions() {
+const ControlledAccordions = ({props, children})  => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -35,7 +36,8 @@ export default function ControlledAccordions() {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <ThemeProvider theme={theme}>
+    <Container>
+      {children}
       <Grid id='about'
         container
         className={classes.root}
@@ -50,7 +52,7 @@ export default function ControlledAccordions() {
           </Typography>
         </Grid>
         <Grid item xs>
-          <Accordion
+          <Accordion 
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
           >
@@ -133,6 +135,13 @@ export default function ControlledAccordions() {
           View My Resume
         </Button>
         </Grid>
-        </ThemeProvider>
+        </Container>
   );
 }
+
+ControlledAccordions.propTypes = {
+  props: PropTypes.string
+};
+
+export default ControlledAccordions;
+

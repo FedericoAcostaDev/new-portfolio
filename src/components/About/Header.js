@@ -1,11 +1,11 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
-
+import { PropTypes } from 'prop-types';
 import logo from "../../Assets/Logo.png";
-import { makeStyles, ThemeProvider } from "@material-ui/core";
-import theme from "../../theme";
+import { makeStyles} from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+
+const useStyles = makeStyles(() => ({
   container: {
     padding: "10vw",
     paddingTop: "80px",
@@ -20,11 +20,10 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const Header = () => {
+const Header = ({props, children}) => {
   const classes = useStyles();
 
   return (
-    <ThemeProvider theme={theme}>
       <Grid 
         container
         className={classes.container}
@@ -34,6 +33,7 @@ const Header = () => {
 
         
       >
+        {children}
         
         <Grid xs={4} align='center' className={classes.logo} item sx={{ flexGrow: 1 }} >
           <img src={logo}  alt="" height="80vm" />
@@ -50,8 +50,11 @@ const Header = () => {
         </Grid>
         
       </Grid>
-    </ThemeProvider>
   );
+};
+
+Header.propTypes = {
+  props: PropTypes.string
 };
 
 export default Header;

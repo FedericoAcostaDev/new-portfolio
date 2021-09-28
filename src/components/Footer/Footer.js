@@ -1,12 +1,12 @@
 import React from "react";
 
 import { IconButton, Grid, Typography } from "@material-ui/core";
-import { makeStyles, ThemeProvider } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+import { PropTypes } from 'prop-types';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import theme from "../../theme";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   container: {
     padding: "10vw",
     //backgroundColor:'#F5F5F6',
@@ -16,14 +16,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Footer = () => {
+const Footer = ({props}) => {
   const classes = useStyles();
 
 
   return (
-    <ThemeProvider theme={theme}>
       <Grid
-    
         container
         className={classes.container}
         direction="row"
@@ -48,8 +46,11 @@ const Footer = () => {
           </IconButton>
         </Grid>
       </Grid>
-    </ThemeProvider>
   );
+};
+
+Footer.propTypes = {
+  props: PropTypes.string
 };
 
 export default Footer;

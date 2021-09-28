@@ -1,10 +1,11 @@
 import React from "react";
 
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import { PropTypes } from 'prop-types';
 import { Button, Typography, Divider, Grid } from "@material-ui/core";
-import theme from "../../theme";
 
-const useStyles = makeStyles((theme) => ({
+
+const useStyles = makeStyles(() => ({
   grid: {
     width: "100%",
   },
@@ -14,11 +15,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DatePicker = () => {
+const DatePicker = (props) => {
   const classes = useStyles();
 
   return (
-    <ThemeProvider theme={theme}>
       <div id="contact">
         <Typography variant="h6" align="center">
           Get in contact!
@@ -42,8 +42,10 @@ const DatePicker = () => {
           </Button>
         </Grid>
       </div>
-    </ThemeProvider>
   );
+};
+DatePicker.propTypes = {
+  props: PropTypes.string
 };
 
 export default DatePicker;

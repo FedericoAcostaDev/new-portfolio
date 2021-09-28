@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles, IconButton } from "@material-ui/core";
+import { PropTypes } from 'prop-types';
 import ExpandLessIcon from "@material-ui//icons/ExpandLess";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     toTop: {
         zIndex: 2,
         position: 'fixed',
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const Scroll = ({showBelow}) => {
+const Scroll = ({props, chindgren, showBelow}) => {
 
     const classes = useStyles();
 
@@ -47,6 +48,7 @@ const Scroll = ({showBelow}) => {
   
   return (
     <div>
+
       {show && 
         <IconButton onClick={handleClick} className={classes.toTop}>
           <ExpandLessIcon />
@@ -54,6 +56,10 @@ const Scroll = ({showBelow}) => {
       }
     </div>
   );
+};
+
+Scroll.propTypes = {
+  props: PropTypes.string
 };
 
 export default Scroll;
