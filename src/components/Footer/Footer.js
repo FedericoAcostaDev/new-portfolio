@@ -27,8 +27,8 @@ const Footer = ({ props }) => {
       spacing={1}
       justifyContent="flex-start"
     >
-      <Grid item xs className={classes.title}>
-        <Typography color='inherit' variant="body2" gutterBottom>
+      <Grid item xs  className={classes.title}>
+        <Typography variant="body2">
           Social
         </Typography>
       </Grid>
