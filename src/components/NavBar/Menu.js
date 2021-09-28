@@ -1,6 +1,6 @@
 import React from "react";
-import {IconButton, Menu, MenuItem} from "@material-ui/core";
-import logo from '../../Assets/Logo.png';
+import { IconButton, Menu, MenuItem } from "@material-ui/core";
+import logo from "../../Assets/Logo.png";
 import { Link as Scroll } from "react-scroll";
 
 export default function BasicMenu() {
@@ -19,10 +19,10 @@ export default function BasicMenu() {
         id="basic-button"
         aria-controls="basic-menu"
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-      > 
-      <img src= {logo} alt='' height='30vm'/>
+      >
+        <img src={logo} alt="" height="30vm" />
       </IconButton>
       <Menu
         id="basic-menu"
@@ -30,17 +30,17 @@ export default function BasicMenu() {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          "aria-labelledby": "basic-button",
         }}
       >
-        <Scroll to='about' smooth={true} >
-        <MenuItem onClick={handleClose}>See My Resume</MenuItem>
+        <Scroll to="about" smooth={true}>
+          <MenuItem onClick={handleClose}>See My Resume</MenuItem>
         </Scroll>
-        <Scroll to='projects' smooth={true} >
-        <MenuItem onClick={handleClose}>Portfolio Projects</MenuItem>
+        <Scroll to="projects" smooth={true}>
+          <MenuItem onClick={handleClose}>Portfolio Projects</MenuItem>
         </Scroll>
-        <Scroll to='contact' smooth={true} >
-        <MenuItem onClick={handleClose}>Get in contact</MenuItem>
+        <Scroll to="contact" smooth={true}>
+          <MenuItem onClick={handleClose}>Get in contact</MenuItem>
         </Scroll>
       </Menu>
     </div>

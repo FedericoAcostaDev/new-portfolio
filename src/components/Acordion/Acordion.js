@@ -1,13 +1,12 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import { PropTypes } from 'prop-types';
+import { PropTypes } from "prop-types";
 import { Accordion, Button, Container } from "@material-ui/core/";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     margin: "4vw",
-    borderRadius: '32px',
+    borderRadius: "32px",
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ControlledAccordions = ({props, children})  => {
+const ControlledAccordions = ({ props, children }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -38,21 +37,22 @@ const ControlledAccordions = ({props, children})  => {
   return (
     <Container>
       {children}
-      <Grid id='about'
+      <Grid
+        id="about"
         container
         className={classes.root}
         direction="column"
         spacing={3}
         columns={{ xs: 2, sm: 1, md: 2 }}
       >
-        <Grid item xs>
+        <Grid item>
           <Typography variant="h6" align="center" gutterBottom>
-            Full-Stack websites with attention to detail and a faithful rendering
-            to the design.
+            Full-Stack websites with attention to detail and a faithful
+            rendering to the design.
           </Typography>
         </Grid>
-        <Grid item xs>
-          <Accordion 
+        <Grid item>
+          <Accordion
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
           >
@@ -69,8 +69,8 @@ const ControlledAccordions = ({props, children})  => {
               <Typography variant="body2">
                 Semantic integration in compliance with web standards, display
                 and usability tests on all the main browsers on the market.
-                <br/>
-                 HTML / CSS / JS / React.js /GraphQL/ webpack / sass - Git
+                <br />
+                HTML / CSS / JS / React.js /GraphQL/ webpack / sass - Git
               </Typography>
               <Typography variant="body2"></Typography>
               <Typography variant="body2"></Typography>
@@ -93,10 +93,9 @@ const ControlledAccordions = ({props, children})  => {
               <Typography variant="body2">
                 Creation of tailor-made themes with a back office that is simple
                 and intuitive to use.
-                <br/>
-                Commerce.js, Rest API's
-                to custom post types, menu location, creation of widgets and
-                templates.
+                <br />
+                Commerce.js, Rest API's to custom post types, menu location,
+                creation of widgets and templates.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -115,33 +114,36 @@ const ControlledAccordions = ({props, children})  => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body2">
-              Databases integration, scripting and website architecture
-                <br/> Node.js/ Daemon/ Express.js/ PostMan/ PostgreSQL/
+                Databases integration, scripting and website architecture
+                <br /> Node.js/ Daemon/ Express.js/ PostMan/ PostgreSQL/
                 Commerce.js
               </Typography>
             </AccordionDetails>
           </Accordion>
         </Grid>
       </Grid>
-      <Grid container  direction='column' alignItems='center' justifyContent='center'>
-      <Button
-      variant='contained'
-      size="small"
-      
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Button
+          variant="contained"
+          size="small"
           className={classes.button}
           href="https://docs.google.com/document/d/e/2PACX-1vSnqiI9ocDHFipLmoIsn5zF3iQ2RAAh5diBUrFkq3bJBC7BYFXgNAhwmcxUK-fTGw/pub"
           color="secondary"
         >
           View My Resume
         </Button>
-        </Grid>
-        </Container>
+      </Grid>
+    </Container>
   );
-}
+};
 
 ControlledAccordions.propTypes = {
-  props: PropTypes.string
+  props: PropTypes.string,
 };
 
 export default ControlledAccordions;
-
