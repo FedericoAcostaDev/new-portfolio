@@ -41,7 +41,7 @@ const Header = () => {
 
         <Grid className={classes.title} align='left' item sx={{ flexGrow: 1 }} >
           <Typography variant="h6" gutterBottom>
-            I am Federico Acosta, a Remote Full-Stack web developer with an art
+            I am Federico Acosta, a Remote Full-Stack developer with an art
             & design background.
           </Typography>
           <Typography variant="body1" gutterBottom>

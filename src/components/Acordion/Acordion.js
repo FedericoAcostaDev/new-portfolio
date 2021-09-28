@@ -45,7 +45,7 @@ export default function ControlledAccordions() {
       >
         <Grid item xs>
           <Typography variant="h6" align="center" gutterBottom>
-            I create websites with attention to detail and a faithful rendering
+            Full-Stack websites with attention to detail and a faithful rendering
             to the design.
           </Typography>
         </Grid>
@@ -90,7 +90,9 @@ export default function ControlledAccordions() {
             <AccordionDetails>
               <Typography variant="body2">
                 Creation of tailor-made themes with a back office that is simple
-                and intuitive to use. I use the native Commerce.js, Rest API's
+                and intuitive to use.
+                <br/>
+                Commerce.js, Rest API's
                 to custom post types, menu location, creation of widgets and
                 templates.
               </Typography>
@@ -111,7 +113,8 @@ export default function ControlledAccordions() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body2">
-                Back-End: Node.js/ Daemon/ Express.js/ PostMan/ PostgreSQL/
+              Databases integration, scripting and website architecture
+                <br/> Node.js/ Daemon/ Express.js/ PostMan/ PostgreSQL/
                 Commerce.js
               </Typography>
             </AccordionDetails>
