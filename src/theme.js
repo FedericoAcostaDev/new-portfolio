@@ -1,4 +1,5 @@
-import { createTheme} from '@material-ui/core/styles';
+import React from 'react';
+import { createTheme, ThemeProvider} from '@material-ui/core/styles';
 
 const theme = createTheme({
     palette: {
@@ -28,4 +29,20 @@ const theme = createTheme({
       },
     },
   });
-  export default theme;
+
+ const Theme = (props) => {
+   const {children} = props;
+   return <ThemeProvider theme={theme}>
+     {children}
+   </ThemeProvider>
+ }
+
+ export const withTheme =(Component) => {
+   return (props) => {
+     return (
+       <Theme>
+         <Component {...props} />
+       </Theme>
+     )
+   };
+ };

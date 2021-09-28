@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Container, Paper, IconButton } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/core/styles";
-import theme from "./theme";
+import {Grid, Container, Paper, IconButton } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
+import { withTheme } from "./theme";
 import photo2 from "./Assets/header.png";
 import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/About/Header";
@@ -16,18 +16,18 @@ import { makeStyles } from "@material-ui/core/styles";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 // import Brightness7Icon from '@mui/icons-material/Brightness7';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundColor: "#F5F5F6",
+    backgroundColor: theme.palette.background.paper, //"#F5F5F6"
   },
-});
+}));
 
-export default function App() {
+function App() {
   const classes = useStyles();
+  const theme= useTheme();
   return (
-    <ThemeProvider theme={theme}>
+    <Grid>
         <NavBar/>
-
       <Scroll showBelow={250} />
       <div
         style={{
@@ -53,6 +53,7 @@ export default function App() {
         </Container>
         <Footer />
       </div>
-    </ThemeProvider>
+      </Grid>
   );
 }
+export default withTheme(App);
