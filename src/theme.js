@@ -43,7 +43,7 @@ const themeDark = createTheme({
       main: "#ffb74d",
       dark: "#c88719",
     },
-    /* error: {
+     error: {
         main: '#f44336',
       },
       warning: {
@@ -54,7 +54,7 @@ const themeDark = createTheme({
       },
       success: {
         main: '#4caf50',
-      }, */
+      }, 
   },
 });
 
