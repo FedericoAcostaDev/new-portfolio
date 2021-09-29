@@ -60,7 +60,6 @@ const Projects = ({ props, children }) => {
         justifyContent="center"
         direction="row"
         spacing={3}
-        columns={{ xs: 4, sm: 8, md: 12 }}
       >
         <Grid item>
           <Card className={classes.root}>
