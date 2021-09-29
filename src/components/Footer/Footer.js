@@ -24,24 +24,18 @@ const Footer = ({ props }) => {
       container
       className={classes.container}
       direction="row"
-      spacing={1}
       justifyContent="flex-start"
     >
-      <Grid item xs  className={classes.title}>
-        <Typography variant="body2">
-          Social
-        </Typography>
+      <Grid item xs className={classes.title}>
+        <Typography variant="body2">Social</Typography>
       </Grid>
       <Grid item xs>
-        <IconButton
-          
-          href="https://www.linkedin.com/in/fede-acosta-b11a22211/"
-        >
+        <IconButton href="https://www.linkedin.com/in/fede-acosta-b11a22211/">
           <LinkedInIcon />
         </IconButton>
       </Grid>
       <Grid item xs>
-        <IconButton  href="https://github.com/FedericoAcostaDev">
+        <IconButton href="https://github.com/FedericoAcostaDev">
           <GitHubIcon />
         </IconButton>
       </Grid>
