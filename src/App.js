@@ -1,6 +1,14 @@
 import React from "react";
 
-import { Grid, Container, Paper, IconButton, AppBar, Box, Toolbar } from "@material-ui/core";
+import {
+  Grid,
+  Container,
+  Paper,
+  IconButton,
+  AppBar,
+  Box,
+  Toolbar,
+} from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import { withTheme } from "./theme";
 import photo2 from "./Assets/header.png";
@@ -38,12 +46,12 @@ function App(props) {
   return (
     <Grid>
       <Box>
-      <AppBar position="fixed" color="primary">
-        <Toolbar>
-          <IconButton className={classes.menuIcon} size="small">
-            <BasicMenu />
-          </IconButton>
-          <IconButton
+        <AppBar position="fixed" color="primary">
+          <Toolbar>
+            <IconButton className={classes.menuIcon} size="small">
+              <BasicMenu />
+            </IconButton>
+            <IconButton
               checked={darkMode}
               onClick={() => setDarkMode(!darkMode)}
             >
@@ -53,9 +61,9 @@ function App(props) {
                 <Brightness4Icon />
               )}
             </IconButton>
-        </Toolbar>
-      </AppBar>
-    </Box>
+          </Toolbar>
+        </AppBar>
+      </Box>
       <Scroll showBelow={250} />
       <div
         className={classes.wallpaper}
@@ -69,8 +77,6 @@ function App(props) {
 
         <Container maxWidth="lg">
           <Paper className={classes.container}>
-            
-
             <ControlledAccordions />
             <Projects />
             <DatePicker />
